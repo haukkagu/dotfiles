@@ -1,0 +1,31 @@
+# Aliases for the shell
+
+# Alias for interacting with the dotfile git repository
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Verbosity and settings that you pretty much just always are going to want
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkdir="mkdir -pv"
+
+# Colorize commands when possible
+alias \
+	ls="ls --color=auto" \
+	grep="grep --color=auto"
+
+# Abbreviations of common commands
+alias \
+	..="cd .." \
+	v="$EDITOR" \
+	xq="xbps-query -Rs" \
+	xi="doas xbps-install -Rs" \
+	xu="doas xbps-install -Su" \
+	xr="doas xbps-remove -R"
+
+# Doas abbreviations
+alias \
+	dv="doas $EDITOR" \
+	poweroff="doas /usr/bin/poweroff" \
+	reboot="doas /usr/bin/reboot"
